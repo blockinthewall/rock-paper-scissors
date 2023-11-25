@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>rock-paper-scissors</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="CSS/rock-paper-scissors.css"
+</head>
+
+<body>
+    <div id="title"><h1>ROCK | PAPER | SCISSORS</h1></div>
+    <div><button id="playbutton">PLAY</button></div>
+<div id="game-screen">
+   <div class="player-choices">
+        <figure>
+            <img src="/Images/rock.svg" class="rock">
+            <figcaption  class="rock">rock</figcaption>
+        </figure>
+        <figure>
+            <img  class="paper" src="/Images/paper.svg">
+            <figcaption  class="paper">paper</figcaption>
+        </figure>
+        <figure>
+            <img class="scissors" src="/Images/scissors.svg">
+            <figcaption class="scissors">scissors</figcaption>
+        </figure>
+    </div>
+</div>
+<div class="score-display">
+    <p id="player-score-count">Player Score: 0</p>
+    <p id="computer-score-count">Computer Score: 0</p>
+</div>
+
+<div>
+ <p id="result"></p>
+</div>
+<div>
+    <button id="playagainbutton">Play Again</button>
+</div>
+    <script src="JS/rock-paper-scissors.js"></script>
+    </div>
+</body>
+</html>
