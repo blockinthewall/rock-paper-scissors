@@ -70,19 +70,13 @@ function playRound() {
   game();
 }
 
-
 // 5 round game
 function game() {
 if (playerScore === 5 || computerScore === 5) {
-
-for (let matter of mattersCopy) {
-  let classesToRemove = ["rock", "paper", "scissors"];
-  matter.classList.remove(...classesToRemove);
-  } 
-
   result.style.visibility="visible";
   playAgainBtn.style.visibility="visible";
- } if (playerScore === 5) {
+ 
+} if (playerScore === 5) {
     result.innerHTML = "You Won!";
 
   } else if (computerScore === 5 ) {
