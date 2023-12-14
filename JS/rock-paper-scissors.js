@@ -65,12 +65,12 @@ function playRound() {
   else if (whatBeatsWhat[playerSelection] === computerSelection) {
     playerScore++;
     playerScoreCount.textContent = `Player Score: ${playerScore}`;
-    choicesRule.textContent = `YOU WON! ${playerSelection} is bigger than ${computerSelection}`;
+    choicesRule.textContent = `YOU WON! ${playerSelection} beats ${computerSelection}`;
   } else
    {
     computerScore++;
     computerScoreCount.textContent = `Computer Score: ${computerScore}`;
-    choicesRule.textContent = `YOU LOSE! ${computerSelection} is bigger than ${playerSelection}`;
+    choicesRule.textContent = `YOU LOSE! ${computerSelection} beats ${playerSelection}`;
   }
   setTimeout(() => (choicesRule.textContent = ""), 4000);
   setTimeout(() => (choicesMade.textContent = "Waiting for player"), 4000);
