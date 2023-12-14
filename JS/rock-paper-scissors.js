@@ -13,8 +13,12 @@ let whatBeatsWhat = { // defining the who beats scenario
   "paper": "rock",
   "scissors": "paper",
 };
+
 let playerScoreCount = document.getElementById("player-score-count")
 let computerScoreCount = document.getElementById("computer-score-count")
+let choicesMade = document.getElementById("choicesMade");
+let choicesRule = document.getElementById("choicesRule");
+
 let playerScore = 0;
 let computerScore = 0;   
 let result = document.getElementById("result");
@@ -33,7 +37,7 @@ function playRound(playerSelection, computerSelection) {
 } 
 */
 
-// making start button to trigger start
+// trigger start
 playBtn.addEventListener("click", startGame);
 
 function startGame() {
@@ -53,20 +57,23 @@ for (let choice of choices) {
 
 function playRound() {
   computerSelection = options[Math.floor(Math.random() * options.length)];
-  console.log(computerSelection);
+  choicesMade.textContent = `Computer chose ${computerSelection}`;
+
   if (playerSelection === computerSelection) {
-    console.log("draw");
+    choicesRule.textContent = "IT'S A DRAW"
   }
   else if (whatBeatsWhat[playerSelection] === computerSelection) {
-    console.log("you won!" + playerSelection + " is bigger than " + computerSelection);
     playerScore++;
     playerScoreCount.textContent = `Player Score: ${playerScore}`;
+    choicesRule.textContent = `YOU WON! ${playerSelection} is bigger than ${computerSelection}`;
   } else
    {
-    console.log("you lose!" + computerSelection + " is bigger than " + playerSelection);
     computerScore++;
     computerScoreCount.textContent = `Computer Score: ${computerScore}`;
+    choicesRule.textContent = `YOU LOSE! ${computerSelection} is bigger than ${playerSelection}`;
   }
+  setTimeout(() => (choicesRule.textContent = ""), 4000);
+  setTimeout(() => (choicesMade.textContent = "Waiting for player"), 4000);
   game();
 }
 
